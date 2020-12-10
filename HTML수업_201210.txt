@@ -19,3 +19,19 @@ github 체크
 
 이후 작업파일 올릴 때
 visual studio code 내에서 git commit -> git push 만 진행
+*Terminal에서는 git add * - git commit으로 진행 - git push -u origin main
+
+집에서 불러오기
+cd 원하는 저장 폴더로 이동 or mkdir 커맨드로 폴더 생성
+git clone https://github.com/charlie-gon/myweb.git
+
+git pull - 내용 업데이트 시
+
+<tag의 종류>
+inline: 채워진 공간 만큼만
+ex) <a> 
+
+block-level: 내용의 길이에 상관없이 무조건 한 block 차지
+ex) <p>
+
+
