@@ -27,6 +27,11 @@ git clone https://github.com/charlie-gon/myweb.git
 
 git pull - 내용 업데이트 시
 
+*용량이 큰 파일 혹은 필요없는 파일을 제외하기
+.gitignore 이라는 이름의 txt파일을 만들어서(확장자는 제외) 제외할 이름을 작성
+ex)/images/
+
+
 <tag의 종류>
 inline: 채워진 공간 만큼만
 ex) <a> 
