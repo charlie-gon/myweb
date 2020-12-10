@@ -18,4 +18,4 @@ visual studio code - Terminal - New Terminal
 github 체크 
 
 이후 작업파일 올릴 때
-git add -> git push 만 진행
+visual studio code 내에서 git commit -> git push 만 진행
