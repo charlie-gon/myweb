@@ -1,0 +1,44 @@
+<!-- 201209 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 스타일 지정 방식 -->
+    <!-- 1.태그에 지정 2.헤드에 지정 3.외부파일에 지정 -->
+
+    <!-- 헤드 영역에 스타일 지정하여 일괄적으로 적용하기 -->
+
+    <style>
+        /* h1 태그에 일괄적으로 노란색 배경 적용 */
+        h1 {
+            background-color: yellow;
+        }
+
+        /* p태그에 일괄적으로 폰트 굵기 적용 */
+        p {
+            font-weight: 800;
+        }
+    </style>
+
+    <!-- style.css에서 지정한 스타일 불러오기 -->
+    <!-- head 안에 넣어야 한다 -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body style="background-color: linen;">
+    <!-- 태그에 스타일 지정 -->
+    <h1 style="color: green;">Heading</h1>
+    <p style="color: lightcoral;">Paragraph</p>
+
+    <h1>Heading</h1>
+
+    <p>Paragraph2</p>
+    <p style="font-weight: 100;">Paragraph3</p>
+</body>
+
+</html>

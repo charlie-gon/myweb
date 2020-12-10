@@ -1,0 +1,10 @@
+
+201210
+HTML
+
+git 설치 후
+visual studio code - Terminal - New Terminal 
+명령어 삽입 
+- git
+- git init : 이것을 실행하면 설정된 폴더 내에 숨김폴더로 git이 생성됨
+

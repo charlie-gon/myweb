@@ -1,0 +1,15 @@
+
+
+201209
+
+HTML
+
+최초 경로 생성: C:\Web\
+
+아파치 톰캣 설치 시 포트번호 8080 -> 80 변경
+
+C:\Program Files\Apache Software Foundation\Tomcat 8.5\conf 이동
+server.xml 노트패드로 옮긴 후 교재 83페이지 참고하여 수정(webprog를 web으로 변경)
+아파치 톰캣 설치 설정 후
+
+localhost/web/index.html 호출
