@@ -7,4 +7,15 @@ visual studio code - Terminal - New Terminal
 명령어 삽입 
 - git
 - git init : 이것을 실행하면 설정된 폴더 내에 숨김폴더로 git이 생성됨
+- github new repository 생성
 
+- git add *
+- git commit -m "메시지" - 로컬 저장소 반영
+
+
+- git push - 원격 저장소 반영
+
+github 체크 
+
+이후 작업파일 올릴 때
+git add -> git push 만 진행
