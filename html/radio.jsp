@@ -11,6 +11,9 @@ pageEncoding="UTF-8"%>
 <body>
     <!-- 자바 표현 -->
     <!-- 배열은 값 하나만 루핑 가능 -->
+
+ 
+
     <%
         String[] userName = request.getParameterValues("subject");
     %>

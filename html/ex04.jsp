@@ -10,16 +10,39 @@
 <body>
 
     <%
+        String mailing = request.getParameter("mail");
+    %>
+
+        <h3><%=mailing%></h3>
+
+        
+        <%
         String[] result = request.getParameterValues("input");
-    %>
-
-    <%
+        %>
+        
+        <%
         for(String values : result){
-
-   %>
+            
+            %>
             <h3><%=values%></h3>
-    <%    
+            <%    
         }
-    %>
-</body>
-</html>
+        %>
+        
+        <%
+            String[] cellphone = request.getParameterValues("phonenum");
+        %>
+
+        <%
+            for(String num : cellphone){
+
+        %>
+           <h3><%=num%></h3>
+                
+           <%
+            }
+            %>
+
+    
+    </body>
+    </html>
