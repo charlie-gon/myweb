@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="practice.jsp" method="get">
+        <fieldset>
+            <legend>아무말 대잔치 연습</legend>
+            이름: <input type="checkbox" name="name"> <br>
+            학과: <input type="checkbox" name="major"><br>
+            비번: <input type="password" name="pwd" size="15" placeholder="비번 1234" required><br>
+
+            <h5>재택 근무를 해야 한다고 생각한다</h5>
+            그걸 말이라고(김대리)<input type="radio" name="homeoffice" value="yes">
+            그걸 말이라고(부장님)<input type="radio" name="homeoffice" value="no">
+            
+            <h5>당신의 주량은</h5>
+            <input type="checkbox" name="soju" value="cannot">제가 술이 약해서<br>
+            <input type="checkbox" name="soju" value="little">반병<br>
+            <input type="checkbox" name="soju" value="onebottle">한병<br>
+            <input type="checkbox" name="soju" value="twobottle">두병<br>
+            <input type="checkbox" name="soju" value="alcoholic">세병이상<br>
+            <input type="checkbox" name="soju" value="anju">안주파<br>
+            <p></p>
+
+            <h5>좋아하는 영화감독</h5>
+            <select name="movie">
+                <label>최애영화</label>
+                <optgroup label="director">
+                    <option>스콜세지</option>
+                    <option>박찬욱</option>
+                    <option>데이빗핀처</option>
+                    <option>이경규</option>
+                </optgroup>
+            </select>
+
+            <h5>볼빨간 사춘기의 볼이 파랗게 질리면 무슨 색일까</h5>
+            <input type="color" name="color_value" value="#0000ff">
+
+            <h5>당신이 살고 싶은 집 평수를 고르시오</h5>
+            <input type="number" name="count" min="3" max="9999">평
+
+            <h5>통장 비밀번호를 정확히 입력하시오</h5>
+            비번: <input type="email" name="myemail">
+
+            <h5>하고 싶은 말</h5>
+            <textarea name="굿" cols="50" rows="5">이거 쓰면 로또 3등</textarea>
+            <p></p>
+            <input type="submit" value="전송해라">
+            <input type="reset" value="다시써라">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
