@@ -1,0 +1,87 @@
+<!-- 201214 / 교재 172~ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/select.html</title>
+</head>
+
+<body>
+    <h1>optgroup</h1>
+    <!-- select>option*4 치면 아래와 같이 자동으로 생성 가능 -->
+    <!-- multiple 옵션을 부여하면 여러개 사용 가능 / multiple 없으면 하나만 선택 가능 -->
+    <select name="subjects" id="subjects" size=9 multiple>
+        <optgroup label="language">
+            <option value="1">HTML5</option>
+            <option value="2">CSS3</option>
+            <option value="3">JavaScript</option>
+            <option value="4">JQuery</option>
+        </optgroup>
+
+        <optgroup label="lunch">
+            <option value="1">Sandwich</option>
+            <option value="2">Sushi</option>
+            <option value="3">Bibimbap</option>
+            <option value="4">Pizza</option>
+        </optgroup>
+    </select>
+
+    <p></p>
+    <select name="Grade" size="5">
+
+        <optgroup label="Grade">
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+        </optgroup>
+    </select>
+
+    <h1>datalist</h1>
+    <form>
+        <label>전공 분야 입력
+            <input type="text" list="majorlist" name="major">
+            <datalist id="majorlist">
+                <option value="Software">소프트웨어</option>
+                <option value="Robot">로봇</option>
+                <option valye="System">시스템</option>
+                <option value="Service">서비스</option>
+                <option value="Education">교육</option>
+            </datalist>
+            <p></p>
+            <input type="submit" value="완료">
+            <input type="reset" value="다시작성">
+        </label>
+    </form>
+
+    <h1>Calendar</h1>
+
+    <form>
+        <h3>오늘 날짜 입력</h3>
+        Today : <input type="date" name="today">
+        <h3>프로젝트 수행 기간</h3>
+        From : <input type="date" name="from" min="2020-05-04" max="2020-12-31">
+        To : <input type="date" name="to" min="2021-01-01" max="2021-05-04">
+        <p></p>
+        <input type="submit" value="제출">
+        <input type="reset" value="다시작성">
+    </form>
+
+    <h1>시간만 입력</h1>
+    <form>
+        <h3>현재 시간 입력</h3>
+        Time : <input type="time" name="Now">
+        <h3>생일</h3>
+        Birthday : <input type="datetime-local" name="bdaytime">
+        <p></p>
+        <input type="submit" value="제출">
+        <input type="reset" value="다시작성">
+    </form>
+
+    
+</body>
+
+</html>

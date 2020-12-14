@@ -1,0 +1,10 @@
+
+201214
+
+HTML_입력 양식 태그와 공간 분할 태그 / 교재 160
+
+- 아파치 톰캣 연결 확인
+*(conf/server.xml파일 수정) 
+* server.xml파일 라인 154는 아래와 같이 수정되어야 한다
+<Context path="web" docBase="C:\web" reloadable="true"/>
+
