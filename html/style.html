@@ -1,0 +1,66 @@
+<!-- 201216 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/style.html</title>
+    <style>
+        h1{
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            background:burlywood;
+        }
+        /* header태그의 자식 h1를 찾아서 수정 */
+        header > h1{
+            background:turquoise;
+        }
+        content h1{
+            font-size: 10px;
+        }
+        
+        /* id값이 first인 사람만 수정 */
+        #first{
+            color: tomato;
+        }
+
+        /* 클래스값이 first인 사람만 수정 */
+        .first{
+            color: teal;
+        }
+
+        header .first{
+            color:black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>스타일 지정1</h1>
+        <h1 id='first'>스타일 지정1-1</h1>
+        <div>
+            <h1>스타일 지정1-2</h1>
+        </div>
+    </header>
+    
+    <content>
+        <h1>스타일 지정2</h1>
+        <h1 id='first'>스타일 지정2-1</h1>
+        <h1 class='first'>스타일 지정2-2</h1>
+    </content>
+    <!-- 페이지에 id값이 중복되지 않도록 / class는 중복이 발생해도 괜찮 -->
+
+    <script>
+        //element를 하나만 가져옴(단수)
+        document.getElementById();
+
+        //클래스 전체를 가져옴(단수 혹은 복수)
+        document.getElementsByClassName();
+    </script>
+    
+    
+</body>
+</html>

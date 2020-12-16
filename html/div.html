@@ -1,0 +1,36 @@
+<!-- 201216 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/div.html</title>
+    <style>
+        div{
+            /* 디폴트 값이 block -> inline 변경 */
+            /* inline-block: 화면 크기에 따라 위치 자동 조정 */
+            display: inline-block; 
+            
+        }
+
+        span{
+            /* 디폴트 값인 inline -> block */
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h3>공간분할태그</h3>
+    <!-- div는 컨텐츠 포함된 라인 전체 block -->
+    <div style="background-color: green;">첫번째 영역</div>
+    <div style="background-color: greenyellow;">두번째 영역</div>
+    <div style="background-color: gold;">세번째 영역</div>
+    <p></p>
+    <h3>공간분할태그2</h3>
+    <!-- span은 컨텐츠 영역만 block -->
+    <span style="background-color: cornflowerblue;">첫번째 영역</span>
+    <span style="background-color:burlywood;">두번째 영역</span>
+    <span style="background-color: antiquewhite;">세번째 영역</span>    
+</body>
+</html>

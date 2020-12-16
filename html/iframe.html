@@ -1,0 +1,18 @@
+<!-- 201216 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/iframe.html</title>
+</head>
+<body>
+    <a href="basic.html" target="iframe_a">Basic화면</a>
+    <a href="intro.html" target="iframe_a">인사말</a>
+    <a href="lecture.html" target="_parent">강좌</a>
+    <!-- parent는 프레임 바깥에서 보여진다 -->
+    <iframe src="div.html" name="iframe_a" scrolling="auto" width="500px" height="100px" frameborder="1"></iframe>
+    <iframe src="div.html" name="intro.html" scrolling="auto" width="500px" height="100px" frameborder="1"></iframe>
+</body>
+</html>
