@@ -1,0 +1,30 @@
+/* 201217 */
+
+/* style.html과 연결 / 필요한 스타일 지정 */
+
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background:burlywood;
+}
+/* header태그의 자식 h1를 찾아서 수정 */
+header > h1{
+    background:turquoise;
+}
+content h1{
+    font-size: 10px;
+}
+
+/* id값이 first인 사람만 수정 */
+#first{
+    color: tomato;
+}
+
+/* 클래스값이 first인 사람만 수정 */
+.first{
+    color: teal;
+}
+
+header .first{
+    color:black;
+}

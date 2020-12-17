@@ -7,11 +7,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        a:link {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: cyan;
+        }
+
+        a:hover {
+            text-decoration: overline;
+        }
+
+        a:active {
+            color: greenyellow;
+        }
+
+        li:hover {
+            color: chocolate;
+        }
+
+        ul>li:hover {
+            color: greenyellow;
+        }
+
+        /* 구조적 가상 클래스 선택자 / 교재 215 */
+        ol>li:nth-child(1) {
+            border: 2px solid greenyellow;
+        }
+
+        li:first-child {
+            border: 1px dotted hotpink;
+        }
+
+        /* 각 그룹별로 2번째 태그에 스타일 지정 */
+        li:nth-of-type(2) {
+            border: 5px dotted hotpink;
+        }
+
+        /* 교재 216 실습 */
+        h3:first-child {
+            color: blue;
+            font-size: 20px;
+        }
+
+        h3:last-child {
+            color: red;
+            font-size: 20px;
+        }
+
+        h3:nth-child(2n+1) {
+            background-color: green;
+        }
+
+        /* 0,1,2 ~ 순서로 카운트 된다는 점 상기해야 한다 */
+        h3:nth-last-child(2n) {
+            background-color: yellow;
+        }
+
+        h3::first-letter{
+            font-size: 30px;
+            color: red;
+        }
+
+        h3::selection{
+            color: blue;
+        }
+
+        /* 교재 218 */
+
+        div{
+            color: white;
+        }
+
+        h2:first-letter{
+            color: red;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        
+        h2>p:hover, h2>p:active{
+            font-size: 150%;
+            border: 3px dotted red;
+        }
+
+        h3::first-line{
+            color: blue;
+        }
+
+        input:focus{
+            background-color: salmon;
+        }
+
+        input:checked + div.d1{
+            background-color: gray;
+        }
+
+       
+    </style>
 </head>
 
 <body>
     <!-- HTML Links -->
-    <a href="link.html" target="_blank">link페이지</a>
+    <a href="link.html" target="_self">link페이지</a>
 
     <!-- HTML Lists -->
     <h1>UL List</h1>
@@ -27,6 +128,32 @@
         <li>Apple</li>
         <li>Banana</li>
     </ol>
+
+    /* 교재 216 실습 */
+
+    <h3>고추바사삭</h3>
+    <h3>고추바사삭</h3>
+    <h3>고추바사삭</h3>
+    <h3>고추바사삭</h3>
+    <h3>고추바사삭</h3>
+
+    교재 218
+
+    <h3>오늘 저녁 메뉴는?</h3>
+    <p>정답 작성: <input type="text"></p>
+    <h2>
+        <p>answer</p> 
+    </h2>
+    힌트 보기: <input type="checkbox">
+    <div class="d1">
+        밀가루로 만들었어요.
+    </div>
+    정답 보기: <input type="checkbox">
+    <div class="d2">
+        피자
+    </div>
+
+
 </body>
 
 </html>

@@ -1,0 +1,33 @@
+
+201217_HTML
+
+js.html / style.html확인
+
+외부파일을 활용(link 태그 / script src)
+- style.html <-> style.css
+- js.html <-> js.js
+
+js 미리보기
+- js.js <-> js.html 
+
+*F12를 눌러 js가 html로 어떻게 변환되고 있는지 체크!
+
+- setattribute 속성을 활용한 표 꾸미기
+
+
+속성 선택자(교재 210) 실습
+- input.html
+
+*MDN의 정보 활용하여 공부하기
+
+가상 선택자(교재 212)실습
+- links.html
+
+https://www.w3schools.com/css/css_pseudo_classes.asp
+
+가상 클래스(교재 215) 실습
+- links.html
+
+가상 클래스 선택자(교재 217)
+
+

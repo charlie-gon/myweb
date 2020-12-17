@@ -3,18 +3,52 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/input.html</title>
+    <style>
+        [type^='t'] {
+            background-color: aquamarine;
+        }
+
+        input[type~="text"] {
+            background-color: blue;
+        }
+
+        input[type*="ss"] {
+            background-color: cornflowerblue;
+        }
+
+        input[type='range'][orient=vertical] {
+            writing-mode: bt-lr;
+            /* IE */
+            -webkit-appearance: slider-vertical;
+            /* WebKit */
+            width: 8px;
+            height: 175px;
+            padding: 0 5px;
+        }
+    </style>
 </head>
+
 <body>
     <form action="input.jsp" method="get">
-   사용자명: <input type="text" name="user_name" id="user_name">
-   <br>아이디: <input type="text" name="user_id" id="user_id">
-   <br>비밀번호: <input type="password" name="user_pw" id="user_pw">
-   <br><input type="submit" value="입력">
-   <input type="reset" value="취소"> 
-</form>
+        사용자명: <input type="text" name="user_name" id="user_name">
+        <br>아이디: <input type="text" name="user_id" id="user_id">
+        <br>비밀번호: <input type="password" name="user_pw" id="user_pw"> <br>
+
+        <p></p>
+
+        오늘의 기분
+
+        <p>Good</p> <input type="range" orient="vertical">
+        <p>Bad</p>
+
+        <br><input type="submit" value="입력">
+        <input type="reset" value="취소">
+    </form>
 </body>
+
 </html>
