@@ -1,0 +1,22 @@
+201218 - HTML
+
+CSS 속성(교재 230)
+
+5-6장
+- boxmodel.html
+- margin/border/padding/content 구분하기
+
+7장
+- position.html
+참고 블로그: https://engkimbs.tistory.com/922
+
+화면을 작게 줄이고 스크롤을 내리면 position 속성값에 따라 다양하게 표현된다(static,relative,sticky,absolute,fixed..etc)
+
+- block element와 inline element의 명확한 구분 필요
+
+- CSS em/rem의 차이점: https://www.codingfactory.net/10748
+
+CSS Forms 실습
+- input.html 활용
+https://www.w3schools.com/css/css_form.asp
+

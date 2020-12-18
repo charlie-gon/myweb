@@ -1,0 +1,49 @@
+<!-- 201218 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/position.html</title>
+    
+    <style>
+        div{
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            margin-bottom: 10px;
+            /* div요소가 block level 요소이기 때문에 9등분으로 분할되어 출력됨 */
+        }
+
+        .container{
+            background-color: yellow;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+
+        .box{
+            background-color: blue;
+            position: sticky;
+            left: 5px;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <article class="container">
+        <div></div>
+        <div class="box">Box</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+    
+</body>
+</html>
