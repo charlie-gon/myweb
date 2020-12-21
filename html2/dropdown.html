@@ -1,0 +1,78 @@
+<!-- 201221 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/dropdown.html</title>
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-pikachu {
+            display: none;
+            position: absolute;
+            background-color: wheat;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-pikachu {
+            display: block;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+
+        .dropdown-anpanman{
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-anpanman{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <span>피카츄</span>
+
+        <div class="dropdown-pikachu">
+            <img src="/pikachu.jpg" alt="pikapika">
+
+            <div class="desc">
+                피카츄
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <span>호빵맨</span>
+
+        <div class="dropdown-anpanman">
+            <img src="/images/image1.png" alt="anpanman">
+
+            <div class="desc">
+                호빵맨
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!-- 201221 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/tablelayout.html</title>
+</head>
+
+<style>
+
+    tr, td{
+        background-color: red;
+        color: white; font-weight: bold;
+    }
+    #example1{
+        caption-side: bottom;
+        border: 3px dotted green;
+        border-spacing: 20px 40px;
+        background-color: yellow;
+    }
+
+    #example2{
+        caption-side: top;
+    }
+
+    caption{
+        border: 1px solid black;
+        
+        
+    }
+</style>
+
+<body>
+    <h1>The caption-side Property</h1>
+    <p>The caption-side property specifies the placement of a table caption:</p>
+
+    <h2>caption-side: bottom:</h2>
+    <table id="example1" border="1">
+        <caption>Table 1.1 Customers</caption>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+
+    <h2>caption-side: top (default):</h2>
+    <table id="example2" border="1">
+        <caption>Table 1.1 Customers</caption>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+</body>
+
+</html>

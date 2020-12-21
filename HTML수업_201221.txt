@@ -1,0 +1,37 @@
+201221 - HTML
+
+CSS 속성
+
+float(page 252)
+
+- float
+- overflow
+- clear
+- zindex
+
+
+jsbin.com 활용하여 손쉽게 연습하기
+
+- table layout
+- border collapse
+- border spacing
+- caption-side
+
+
+CSS Units
+https://www.w3schools.com/cssref/css_units.asp
+
+CSS Opacity
+
+CSS Navigation Bar
+https://www.w3schools.com/css/css_navbar.asp
+
+- CSS Dropdowns
+
+- CSS image gallery
+
+bootstrap template free 
+- https://startbootstrap.com/theme/resume 템플릿 분석
+
+* box-sizing: width,height 값에 padding, border의 포함 여부 체크
+* box-sizing: border-box = width/height에 자동으로 padding, border 값을 포함
