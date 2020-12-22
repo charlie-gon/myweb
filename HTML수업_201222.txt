@@ -1,0 +1,33 @@
+201222 - HTML CSS
+
+Flexbox
+https://www.w3schools.com/css/css3_flexbox.asp
+
+
+main axis 조정 = justify
+main axis 반대편 = align
+
+flex속성 참고자료
+https://heropy.blog/2018/11/24/css-flexible-box/
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/#:~:text=main%20axis%20%E2%80%93%20The%20main%20axis,and%20going%20to%20main%2Dend.
+
+flex-shrink: shrink가 줄어드는 비율
+
+CSS Advanced 요소들 둘러보기
+
+JavaScript
+
+- main.HTML
+- basic.js
+
+typeof는 변수 타입 표시
+JS는 고정된 타입 없이 사용자 설정에 따라 가변적
+
+Difference between console.log / document.write
+
+https://developer.mozilla.org/en-US/docs/Web/API/Console/log
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+
+- main.html / list.js 활용한 테이블 생성 마무리 하기
