@@ -27,7 +27,9 @@ JS는 고정된 타입 없이 사용자 설정에 따라 가변적
 Difference between console.log / document.write
 
 https://developer.mozilla.org/en-US/docs/Web/API/Console/log
-
 https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+
+document.write = 브라우저 내에 text 출력
+console.log = JavaScript의 메소드격 / 사용자는 여기서 출력되는 값을 볼 수 없음(F12를 통해 debugging console창을 확인하던지 해야됨)
 
 - main.html / list.js 활용한 테이블 생성 마무리 하기
