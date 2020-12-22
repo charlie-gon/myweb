@@ -30,16 +30,15 @@ document.write('</ul>');
 
 //myFunc 정의
 function myFunc() {
-    document.write('<table class = "tbl">');
-    document.write('<tr class="row">');
+    document.write('<table width="300px" height="80px" border="1px solid black">');
 
     for (let i = 1; i <= 10; i++) {
-        
-        document.write('<td class="data">' + 'i의 값은: ' + '</td>' 
-        + '<b>' + '<td class="data">' + i + '</td>' + '</b>' 
-        + '<td class="data">' + ' 입니다.' + '</td>');
-        document.write('<br>');
+        document.write('<tr>');
+        document.write('<td>' + 'i의 값은: ' + '</td>'
+            + '<b>' + '<td>' + i + '</td>' + '</b>'
+            + '<td>' + ' 입니다.' + '</td>');
+
+        document.write('</tr>');
     }
-    document.write('</tr>');
 }
 document.write('</table>');
