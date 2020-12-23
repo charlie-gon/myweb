@@ -1,15 +1,36 @@
-//구구단 4단
 
-let dan = 4;
+//구구단 출력
 
-document.write('<table border="1 solid black">');
+function mulTwo(){
 
-for(let i = 1; i <=9; i++){
-    document.write('<tr>');
-    document.write('<td>' + dan + ' * ' + i + '</td>' 
-    + '<td>' + ' = ' + '</td>' 
-    + '<td>' +(dan * i) + '</td>');
-    document.write('</tr>');
+    document.write('</table>');
+    
+    let two = 2;
+    document.write('<table border="1">');
+    for(let i = 1; i<10; i++){
+        document.write('<tr>');
+        document.write('<td>' + two + ' * ' + i + '</td>'
+        + '<td>' + ' = ' + '</td>'
+        + '<td>' + (two * i) + '</td>');
+        document.write('</tr>');
+        
+    }
+    document.write('</table>');
 }
 
-document.write('</table>');
+function mulThree(){
+
+    document.write('</table>');
+    
+    let three = 3;
+    document.write('<table border="1">');
+    for(let i = 1; i<10; i++){
+        document.write('<tr>');
+        document.write('<td>' + three + ' * ' + i + '</td>'
+        + '<td>' + ' = ' + '</td>'
+        + '<td>' + (three * i) + '</td>');
+        document.write('</tr>');
+        
+    }
+    document.write('</table>');
+}

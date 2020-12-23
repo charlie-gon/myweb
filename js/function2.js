@@ -24,23 +24,28 @@
 
     //5개 숫자 입력 후 가장 큰 수 출력
     let numAry = [];
-        for(let i = 0; i<5; i++){
-            let name1 = window.prompt('숫자를 입력하세요');
-            numAry[i] = parseInt(name1);
-        }
-    console.log(numAry);
-
-    findMax(numAry);
-
     let max = 0;
-    function findMax(numAry){
-        for(num of numAry){
-            if(max < num){
-                max = num;
+    let min = 0;
+
+        for(let i = 0; i<5; i++){
+            numAry[i] = parseInt(window.prompt(i + 1) + '번째 숫자 입력');
+        }
+        
+        for(let i = 0; i<numAry.length; i++){
+            if(max < numAry[i]){
+                max = numAry[i];
             }
         }
-    }
-    console.log('가장 큰수: ' + max);
+
+        min = numAry[0];
+        for(let i = 0; i<numAry.length; i++){
+            if(min > numAry[i]){
+                min = numAry[i];
+            }
+        }
+
+        document.write('최대값: ' + max + '<br>');
+        document.write('최소값: ' + min + '<br>');
 
 
     // checkGrade(name1);
