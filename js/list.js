@@ -34,9 +34,9 @@ function myFunc() {
 
     for (let i = 1; i <= 10; i++) {
         document.write('<tr>');
-        document.write('<td>' + 'i의 값은: ' + '</td>'
-            + '<b>' + '<td>' + i + '</td>' + '</b>'
-            + '<td>' + ' 입니다.' + '</td>');
+        document.write('<td align="center">' + 'i의 값은: ' + '</td>'
+            + '<td align="center" style="font-weight: bold">' + i + '</td>'
+            + '<td align="center">' + ' 입니다.' + '</td>');
 
         document.write('</tr>');
     }
