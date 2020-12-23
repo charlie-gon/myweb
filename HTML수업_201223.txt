@@ -12,3 +12,13 @@ list.js
 -
 
 function.js / function2.js
+
+자바스크립트 array
+https://www.w3schools.com/js/js_arrays.asp
+
+for of / for in
+https://jsdev.kr/t/for-in-vs-for-of/2938
+
+https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav
+
+https://www.w3schools.com/jsref/jsref_forin.asp
