@@ -47,19 +47,23 @@ function input_friend(){
     friend.age = agef;
     friend.hobby = hobbyf;
 
+    let info = document.getElementById('showFriends');
+    let fTr = document.createElement('tr');
     let fTd1 = document.createElement('td');
-    fTd1 = friend.name;
-
     let fTd2 = document.createElement('td');
-    fTd2 = friend.age;
-
     let fTd3 = document.createElement('td');
-    fTd3 = friend.hobby;
 
-    let fLow = document.createElement('tr');
-    fLow = fTd1, fTd2, fTd3;
+    fTd1.innerHTML = namef;
+    fTd2.innerHTML = agef;
+    fTd3.innerHTML = hobbyf;
 
-    document.getElementById('friends').append(fLow);
+    info.append(fTr);
+    fTr.append(fTd1);
+    fTr.append(fTd2);
+    fTr.append(fTd3);
+
+    
+
 
 }
 
