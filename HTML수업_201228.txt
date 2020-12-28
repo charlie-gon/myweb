@@ -11,10 +11,14 @@ split을 통한 배열생성
 
 slice/substring difference???
 
+둘 다 start인덱스부터 end인덱스 '직전'까지 리턴
+
+substring() cannot accept negative(-) indexes.
+slice() can accept negative(-) indexes.
+
 참고)
 https://interacting.tistory.com/144
 
-둘 다 start인덱스부터 end인덱스 '직전'까지 리턴
 
 slice(start, end) = start 부터 시작 ~ end 까지 값 출력 / start 값은 제외
 substring(start, end) = 
@@ -22,11 +26,12 @@ substring(start, end) =
 
 substr / substring difference???
 
+- substr(start, length) = 'abc' / substr(1,2) = 'ab'
+- substring(start, to) = 'abc' / substring(1,2) = 'b'
+        
 참고)
 https://c10106.tistory.com/3253
 
-- substr(start, length) = 'abc' / substr(1,2) = 'ab'
-- substring(start, to) = 'abc' / substring(1,2) = 'b'
 
 substring 참고자료)
 
