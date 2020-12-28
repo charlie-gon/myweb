@@ -27,3 +27,7 @@ https://c10106.tistory.com/3253
 
 - substr(start, length) = 'abc' / substr(1,2) = 'ab'
 - substring(start, to) = 'abc' / substring(1,2) = 'b'
+
+substring 참고자료)
+
+https://c10106.tistory.com/3253
