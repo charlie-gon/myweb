@@ -42,10 +42,10 @@ function input_friend(){
     let agef = document.getElementById('age').value;
     let hobbyf = document.getElementById('hobby').value;
 
-    let friend = {};
-    friend.name = namef;
-    friend.age = agef;
-    friend.hobby = hobbyf;
+    // let friend = {};
+    // friend.name = namef;
+    // friend.age = agef;
+    // friend.hobby = hobbyf;
 
     let info = document.getElementById('showFriends');
     let fTr = document.createElement('tr');
