@@ -1,0 +1,99 @@
+<!-- 201230 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+
+    <!-- <table border="1">
+        <tr>
+            <td>
+                <label for="id">ID</label>
+                <input type="checkbox" name="id" id="id">
+            </td>
+
+            <td>홍길동</td>
+            <td>20세</td>
+            <td>독서</td>
+
+            <td><button>NO</button></td>
+        </tr>
+    </table> -->
+
+    <script>
+
+        // let members = [];
+
+        // for(let i = 1; i<=3; i++){
+        //     let member = {};
+        //     member.name = '홍길동' + i;
+        //     member.age = 20 + i + '세';
+        //     member.hobby = '독서'+ i;
+        //     members.push(member);
+        // }
+        // console.log(members);
+
+        let members = [];
+        for (let i = 1; i <= 3; i++) {
+            let member = {};
+            member.name = '포켓몬' + i;
+            member.age = 20 + i + '세';
+            member.hobby = '독서' + i;
+            members.push(member);
+        }
+
+        //table
+        let tbl = document.createElement('table');
+        tbl.setAttribute('border', '1');
+
+        members.forEach(function (a, b, c) {
+
+            //label, index
+            let label = document.createElement('label');
+            label.setAttribute('for', 'id');
+
+            let input = document.createElement('input');
+            input.setAttribute("type", "checkbox");
+            input.setAttribute('name', 'id');
+            input.setAttribute('id', 'id');
+
+            let tr = document.createElement('tr');
+            let td2 = document.createElement('td');
+            td2.append(label);
+            td2.append(input);
+            tr.append(td2);
+
+            for (field in a) {
+                let td1 = document.createElement('td');
+
+                td1.innerHTML = a[field];
+
+                tr.append(td1);
+
+            }
+
+            //button
+            let td3 = document.createElement('td');
+            let btn = document.createElement('button');
+            btn.innerHTML = 'OK';
+            td3.append(btn);
+            tr.append(td3);
+            
+            tbl.append(tr);
+
+        });
+
+        //return
+        document.getElementById('show').append(tbl);
+
+    </script>
+</body>
+
+</html>

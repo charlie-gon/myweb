@@ -1,0 +1,121 @@
+201230 - HTML CSS
+
+<!-- 201230 -->
+
+반복문
+https://www.w3schools.com/js/js_loop_for.asp
+
+
+form.html 활용한 반복문
+cal.html 활용한 달력 출력
+array.html / array_map.js
+
+Javascript Dates
+https://www.w3schools.com/js/js_dates.asp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+</head>
+<body>
+    
+    <div id="show"></div>
+    <script>
+        let s1 = document.getElementById('show');
+        let h = document.createElement('h1');
+        h.innerHTML = 'Happy New Year';
+        s1.append(h);
+
+        let days = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat'];
+        // for(let i = 0; i<days.length; i++){
+        //      let h1 = document.createElement('h1');
+        //      h1.setAttribute('style','color: red; text-align:center; border:1px dotted black');
+        //      h1.innerHTML = days[i];
+        //      s1.append(h1);
+        // }
+
+
+        //No.2
+
+        let tbl = document.createElement('table');
+        
+        let tr = document.createElement('tr');
+        
+        for(let i = 0; i<days.length; i++){
+            let td = document.createElement('td');
+            td.innerHTML = days[i];
+            tr.append(td);
+        }
+        tbl.append(tr);
+        tbl.setAttribute('border','1');
+        s1.append(tbl);
+
+
+        // No.3
+        let tdTag = document.createElement('td');
+        tdTag.setAttribute('border','1');
+        let trTag = document.createElement('tr');
+        for(let i = 1; i<=31; i++){
+            let td = document.createElement('td');
+            td.innerHTML = i;
+            trTag.append(td);
+            if(i % 7 == 0){
+                tbl.append(trTag);
+                trTag = document.createElement('tr');
+                td.setAttribute('style','background: turquoise;');
+            }if(i % 7 == 1){
+                td.setAttribute('style','background: tomato;');
+            }if(i % 7 != 0 && i % 7 != 1){
+                td.setAttribute('style','background: yellow;');
+            }
+        }
+        tbl.append(trTag);
+        s1.append(tbl);
+    </script>
+</body>
+</html>
