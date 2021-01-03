@@ -1,53 +1,92 @@
 <!-- 201230 -->
 
+<!-- 달력 출력하기 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cal.html</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #E6E6E6;
+    }
+
+  </style>
 </head>
 
 <body>
 
-    <div id="show"></div>
-    <script>
+  <div id="calendar"></div>
 
-        function createHeader(a, b, c){
-            let tdTag = document.createElement('th');
-            tdTag.innerHTML = a;
-            trTag.append(tdTag);
-            tableTag.append(trTag);
+  <script>
+
+    function createCalendar(elem, year, month) {
+
+      let mon = month - 1;
+      let d = new Date(year, mon);
+
+      let table = '<table><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>';
+
+      // spaces for the first row
+      // from Monday till the first day of the month
+      // * * * 1  2  3  4
+
+      for (let i = 0; i < getDay(d); i++) {
+        table += '<td></td>';
+      }
+
+      //<td> with actual dates
+      while (d.getMonth() == mon) {
+        table += '<td>' + d.getDate() + '</td>';
+        //getDay(d) % 7 == 6: to get Sunday(last day of week) to get a newline.
+        if (getDay(d) % 7 == 6) {
+          table += '</tr><tr>';
         }
 
-        let trTag = document.createElement('tr');
-        function createData(item, idx, ary){
-            if(idx % 7 == 0){
-                trTag = document.createElement('tr');
-            }
-            let tdTag = document.createElement('td');
-            tdTag.innerHTML = item;
-            trTag.append(tdTag);
-            tableTag.append(trTag);
-        };
+        d.setDate(d.getDate() + 1);
+      }
 
-        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
-        let dates = [];
-        for (let i = 1; i <= 31; i++) {
-            dates.push(i); // = unshift 역순
-            //date.push(i) = 정배열
+      // add spaces after last days of month for the last row
+      // 29 30 31 * * * *
+      if(getDay(d) != 0){
+        for(let i = getDay(d); i<7; i++){
+          table += '<td></td>';
+          
         }
-        let tableTag = document.createElement('table');
-        //console.log(tableTag);
-        tableTag.setAttribute('border', '1');
-        tableTag.setAttribute('id', 'tbl'); //id값 부여
+      }
 
-        days.forEach(createHeader);
-        dates.forEach(createData);
-       
-        document.getElementById('show').append(tableTag);
-    </script>
+      // close the table
+      table += '</tr></table>';
+
+      elem.innerHTML = table;
+    }
+
+    //날(day) 구하기
+    function getDay(date){
+      let day = date.getDay();
+      return day;
+    }
+
+    createCalendar(calendar, 2020, 12);
+
+
+  </script>
 </body>
 
 </html>
