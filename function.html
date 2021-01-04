@@ -1,0 +1,111 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function.html</title>
+</head>
+<body>
+
+  
+    <div id="show"></div>
+    <script>
+        function sum(a, b){
+            return a + b;
+        }
+        let result = sum(10,29);
+
+        function showElement(){
+            let h1 = document.createElement('h1');
+            h1.innerHTML = 'hello';
+            return h1;
+        }
+
+        //Start
+        function Person(name, age, hobby){
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+        }
+        
+        let persons = [];
+        Person.prototype.phone = '010-1111-2222'; //전체추가
+        // Person.prototype.toString = function(){
+        //     return this.name + ' - '  + this.age + ' - ' + this.hobby + ' - ' + this.phone;
+        // }
+
+        
+        let p1 = new Person('Hwang',20,'sleeping');
+        p1.phone = '010-2341-2342'; //번호 추가
+        let p2 = new Person('CHoi', 22,'Books');
+        persons.push(p1);
+        persons.push(p2);
+        persons.push(new Person('Kim', 23, 'Game'));
+        persons.push(new Person('Lee','45','Movies'));
+
+
+
+        function createTable(persons){
+
+            let table = document.createElement('table');
+
+            table.setAttribute('border','1');
+
+            //TH
+            let tr = document.createElement('tr');
+            tr.setAttribute('style','background-color: turquoise');
+            
+            let tblHeads = ['Name','Age','Hobby','Phone'];
+            
+            for(let i = 0; i<tblHeads.length; i++){
+                let td = document.createElement('th');
+                td.innerHTML = tblHeads[i];
+                tr.append(td);
+            }
+            table.append(tr);
+
+            //TD
+            for(p of persons){
+               let tr2 = document.createElement('tr');
+               for(field in p){
+                   let td2 = document.createElement('td');
+                   td2.innerHTML = p[field];
+                   tr2.append(td2);
+
+                }
+                table.append(tr2);
+            }
+            
+            return table;
+        }
+
+        result = createTable(persons);
+        //End
+
+
+        //변수에 function 할당
+        let x = (a, b) => a + b; // arrow functions
+        let y = x;
+
+        console.log(x(10,3));
+        console.log(y(20,24));
+
+        function findMax(){
+            console.log(arguments); //arguments는 매개값 개수에 따라 유연하게 변화
+            let max = 0;
+            for(let i = 0; i<arguments.length; i++){
+                if(max < arguments[i]){
+                    max = arguments[i];
+                }
+            }
+            console.log('max: ' + max);
+        }
+        findMax(1,3,5,8,7,2);
+
+
+        document.getElementById('show').append(result);
+    </script>
+</body>
+</html>

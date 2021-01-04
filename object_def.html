@@ -1,0 +1,49 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object_def.html</title>
+</head>
+<body>
+    <script>
+
+        //생성자
+        function Person(name, age, hobby){
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+
+        }
+
+        let persons = [];
+        Person.prototype.phone = '010-1111-2222'; //전체추가
+        Person.prototype.toString = function(){
+            return this.name + ' - '  + this.age + ' - ' + this.hobby + ' - ' + this.phone;
+        }
+
+        
+        let p1 = new Person('Hwang',20,'sleeping');
+        p1.phone = '010-2341-2342'; //번호 추가
+        let p2 = new Person('CHoi', 22,'Books');
+        persons.push(p1);
+        persons.push(p2);
+        persons.push(new Person('Kim', 23, 'Game'));
+
+        for(person of persons){
+            console.log(person.toString());
+        }
+
+        let p4 = {
+            name: 'Hong',
+            age: 20
+        }
+        https://www.w3schools.com/js/js_object_es5.asp
+        Object.defineProperty(p4, 'hobby','reading'); // == p4.hobby = 'reading';
+
+
+    </script>
+</body>
+</html>

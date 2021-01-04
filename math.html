@@ -1,0 +1,32 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math.html</title>
+</head>
+
+<body>
+    <script>
+
+
+        let vals = [];
+        for (let i = 0; i < 6; i++) {
+            let val = Math.floor(Math.random() * 6);
+            vals[i] = val;
+            for(let j = 0; j<i; j++){ //이전값과 비교
+                if(vals[j] == val){ //중복값 발생 시 이전으로 back
+                    i--;
+                    break;
+                }
+            }
+        }
+        console.log(vals);
+        
+    </script>
+</body>
+
+</html>

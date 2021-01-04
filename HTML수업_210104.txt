@@ -1,0 +1,25 @@
+210104 - HTML CSS
+
+math.HTML
+boolean.HTML
+object_def.html
+function.html
+dom.html
+
+https://www.w3schools.com/js/js_math.asp
+
+https://www.w3schools.com/js/js_booleans.asp
+
+https://www.w3schools.com/js/js_object_definition.asp
+
+https://www.w3schools.com/js/js_object_es5.asp
+
+
+
+Loop While
+
+JS Objects
+
+JS HTML DOM
+
+

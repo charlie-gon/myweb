@@ -1,5 +1,8 @@
 // 201230
 
+참고
+https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d
+
 // let today = new Date('2020-12-15');
 // console.log(today.getDay());
 
@@ -11,12 +14,16 @@
 
 // setCal('2020','05','04');
 
+
+
 function showCal(year, month){
     let firstDay = (new Date(year, month)).getDay();
 
     tbl = document.getElementById('calendar-body');
 
-    tbl.getElementByI
+    tbl.innerHTML = "";
+
+
 }
 
 

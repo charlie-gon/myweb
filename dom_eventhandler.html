@@ -1,0 +1,28 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_evenhandler.html</title>
+</head>
+<body>
+
+    <button id="btn">Click</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', () => { //'click' 이벤트 발생 시 리턴 값 발생하는 function 정의
+            window.alert('boom!');
+        });
+        btn.addEventListener('mouseover', () => {
+            btn.style.backgroundColor = 'yellow';
+        });
+        btn.addEventListener('mouseout', ()=>{
+            btn.style.backgroundColor = '';
+        });
+    </script>
+    
+</body>
+</html>

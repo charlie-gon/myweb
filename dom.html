@@ -1,0 +1,86 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: turquoise;
+            position: relative;
+            /* //균일한 이동 위해 position: relative 설정 */
+
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            background-color: tomato;
+            position: absolute;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 구구단 -->
+    <div class="show"></div>
+
+    <button id="btn">Move</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <script>
+        //구구단
+        //변수 넣으면 해당 구구단 출력되도록
+        //테이블에 넣기
+        // function makeMulti(nums){
+
+        //     let num = nums;
+
+        //     let table = document.createElement('table');
+        //     table.setAttribute('border','1');
+
+        //     let tr = document.createElement('tr');
+        //     for(let i = 1; i<=9; i++){
+        //         let td = document.createElement('td');
+        //         td.innerHTML = num + ' * ' + i + ' = ' + (num*i);
+        //         tr.append(td);
+        //     }
+        //     table.append(tr);
+        //     let result = document.getElementsByClassName('show');
+        //     console.log(result); //생략해도 됨(참고용)
+        //     result[0].append(table); //배열 내 값을 가져오기 위해 [0] 사용
+        // }
+
+        // makeMulti(2);
+
+        let btn = document.getElementById('btn');
+        btn.onclick = moveStart; //moveStart();로 하면 클릭하기 전에 실행되어버린다
+
+        function moveStart() {
+            console.log('start');
+            let animate = document.getElementById('animate');
+            for (let i = 0; i < 5; i++) {
+                let i = 0;
+                let myInterval = setInterval(() => {
+                    i ++;
+                    animate.style.left = i + 'px';
+                    animate.style.top = i + 'px';
+                    if(i ==350){
+                        clearInterval(myInterval);
+                    }
+                }, 10);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!-- 210104 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean.html</title>
+</head>
+<body>
+    <script>
+        let trueOrFalse = (10 > 9);
+        trueOrFalse = 0;  
+        trueOrFalse = -1;
+        trueOrFalse = undefined;
+        trueOrFalse = null;
+
+        //0, undefined, null = False
+        //일단 값이 있으면(-1) = True   
+
+        if(trueOrFalse){
+            console.log('True');
+        }else{
+            console.log('False');
+        }
+
+        let val1 = 100;
+        let val2 = '100';
+        if(!(val1 === val2)){ // ===: check value and type
+            console.log('True');
+        }else{
+            console.log('False');
+        }
+
+        let result = val1 > 100 ? '100보다 크다' : '100보다 작다';
+
+        result = new Object();
+
+        //Object 내부에 Method 생성
+
+        result = {
+            name: 'Hong',
+            age: 20,
+            getName: function(){
+                return this.name;
+            },
+            getInfo: function(){
+                console.log(this.name + ' - ' + this.age + ' - ' + this.hobby);
+            },
+            get getAge(){
+                return this.age;
+            },
+            set setAge(age){
+                this.age = age;
+            }
+        }
+        result.setAge = 25;
+        console.log(result.getAge);
+        result.hobby = 'reading';
+        delete result.hobby; // 삭제
+        result.getInfo();
+
+        //배열일 경우 for of..
+        //오브젝트일 경우 for in..
+
+        let person = {
+            name: 'Hwang',
+            age: 10,
+            address: 'Seoul'
+        }
+        let vals = Object.values(person);
+        vals = JSON.stringify(person);
+        console.log('values: ' + vals);
+
+        let persons = [person];
+
+        let person1 = {
+            name: 'Lee',
+            age: 20,
+            address: 'HK' 
+        }
+        persons.push(person1);
+
+        for(person of persons){
+            for(field in person){
+                console.log(person[field]);
+            }
+        }
+
+
+
+        // let v = result;
+        // result.age = 15; // 동일한 Object 참조하고 있기 때문에 result가 변수 v에 할당되어 있더라도 값을 바꿀 수 있음
+        // console.log(v.name, v.age, v.hobby);
+
+        // //Object가 아닌 일반 타입의 경우
+        // result = 'hello';
+        // v = result;
+        // result = 'world';
+        // console.log(v);
+    </script>
+</body>
+</html>
