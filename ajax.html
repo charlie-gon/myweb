@@ -1,0 +1,66 @@
+<!-- 210105 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax.html</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        let xhtp = new XMLHttpRequest();
+        xhtp.onreadystatechange = function(){
+            console.log(xhtp.readyState, xhtp.status);
+            if(xhtp.readyState == 4 && xhtp.status == 200){
+                console.log(xhtp.responseXML);
+                let doc = xhtp.responseXML;
+                
+                let result = doc.querySelectorAll('dataset > record');
+
+                //Table ㅊㄹ
+
+                let table = document.createElement('table');
+                table.setAttribute('border','1');
+
+                //heads
+                let tr = document.createElement('tr');
+                for(let i = 0; i<result[i].childNodes.length; i++){
+                    let td = document.createElement('td');
+                    let str = document.createTextNode(result[i].childNodes[0].nodeName);
+                    let textNode = document.createTextNode(str);
+                    td.appendChild(textNode);
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr); //수정 필요!
+
+                for(let i = 0; i<result.length; i++){
+                    
+                    let tr = document.createElement('tr');
+                    
+                    for(let j = 0; j<result[i].childNodes.length; j++){ // why 'result[i].childNodes.length'?
+                        
+                        let td = document.createElement('td');
+                        let str = result[i].childNodes[j].childNodes[0].nodeValue; // why 'childNodes[j]'?
+                        let textNode = document.createTextNode(str); //텍스트 변환
+                        td.appendChild(textNode);
+                        tr.appendChild(td);
+                    }
+                    
+                    table.appendChild(tr);
+                }
+                let show = document.getElementById('show');
+                show.appendChild(table);
+
+
+            }
+        }
+        xhtp.open('get','dataset.xml');
+        xhtp.send();
+        
+        
+        
+    </script>
+</body>
+</html>

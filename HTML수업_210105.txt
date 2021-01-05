@@ -1,0 +1,19 @@
+210105 - HTML CSS
+
+진도)
+- JS ajax
+
+ajax.HTML
+ascending.HTML
+
+
+개념)
+https://www.w3schools.com/js/js_ajax_intro.asp
+
+appendChild()
+
+이클립스에 아파치 insert
+- 구글링으로 tomcat 8.5 압축 파일 다운 및 C드라이브 Dev 밑에 압축 해제
+- 이클립스 windows - preferences - Server - Runtime Environment - 아파치 톰캣 8.5 폴더 추가
+- server 더블클릭 및 8080 -> 8088로 번호 변경
+- windows -> web browser - Chrome 변경
