@@ -16,14 +16,14 @@
             if(xhtp.readyState == 4 && xhtp.status == 200){
                 console.log(xhtp.responseXML);
                 let doc = xhtp.responseXML;
-                
+
                 let result = doc.querySelectorAll('dataset > record');
 
                 //Table ㅊㄹ
 
                 let table = document.createElement('table');
                 table.setAttribute('border','1');
-
+                
                 //heads
                 let tr = document.createElement('tr');
                 for(let i = 0; i<result[i].childNodes.length; i++){
@@ -52,6 +52,7 @@
                 }
                 let show = document.getElementById('show');
                 show.appendChild(table);
+
 
 
             }
